@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Uncle Kylie 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page1">
+  <div class="container">
+    <h1 class="pixel-text">🎉 HAPPY BIRTHDAY 🎉</h1>
+    <h2 class="pixel-text">UNCLE KYLIE 💖</h2>
+    <p class="pixel-text">Tap the cake to continue 🎂</p>
+    <div id="cake">🎂</div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Confetti emoji rain
+    const emojis = ["🎂","🎉","🎈","💖","✨","🌸"];
+    setInterval(() => {
+      const e = document.createElement("div");
+      e.className = "emoji";
+      e.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      e.style.left = Math.random()*100 + "vw";
+      e.style.animationDuration = 2 + Math.random()*3 + "s";
+      document.body.appendChild(e);
+      setTimeout(() => e.remove(), 5000);
+    }, 300);
+
+    document.getElementById("cake").addEventListener("click", () => {
+      window.location.href = "blow.html";
+    });
+  </script>
+</body>
+</html>
