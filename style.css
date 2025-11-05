@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pixel-text {
+  color: #ff66b2;
+  text-shadow: 2px 2px white;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.page1 {
+  background: linear-gradient(#ffd6e8, #fff);
+}
+
+.page2 {
+  background: linear-gradient(#fff0f6, #ffe6f2);
+}
+
+.page3 {
+  background: linear-gradient(#ffe6f9, #ffffff);
+}
+
+#cake {
+  font-size: 80px;
+  margin-top: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Falling emoji */
+.emoji {
+  position: fixed;
+  top: -2em;
+  font-size: 1.5em;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Page3 images */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.small {
+  font-size: 10px;
+}
